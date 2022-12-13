@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="abc.css">
+    <title>Document</title>
+    <style>
+        #red {
+            color: red;
+            font-size: 50px;
+        }
+        
+        #red:hover {
+            color: black;
+        }
+        /*
+            Mobile < 768px (max-width: 767px)
+            Tablet: >=768px cho đến < 992px (min-width: 768px) and (max-width: 991px)
+            Desktop: từ 992px trờ lên (min-width: 992px)
+            Ví dụ: mobile text màu xanh la cây
+                tablet: text màu xanh dươn
+                desktop thì màu đỏ
+        */
+        
+        @media screen and (max-width: 767px) {
+            /*Mobile*/
+            #abc {
+                color: green;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            /*Tablet*/
+            #abc {
+                color: blue;
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            #abc {
+                color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class="red" id="abc">text</p>
+    <img src="abc.png" alt="abc" width="100%">
+    <a style="color:aqua;" href="http://www.google.com" target="_blank">google</a>
+    <button id="acb" onclick="tenHam()">click</button>
+    <script>
+        function tenHam() {
+            document.getElementById("abc").textContent = "Giáp";
+        }
+
+        // Xác định thẻ nào muốn thay đôi
+        // Thay đổi nôi dung của thẻ: textContent
+    </script>
+</body>
+
+</html>
